@@ -1,0 +1,11 @@
+/* 
+*{} */
+
+.container-fluid{
+    background-color: rgb(51, 173, 255, 0.7);
+} 
+
+.container{
+    border: 2px solid rgb(241, 4, 4);
+}
+
