@@ -5,7 +5,24 @@
     background-color: rgb(51, 173, 255, 0.7);
 } 
 
+.navbar-container{
+    width: 10%;
+}
+
+.info-container{
+    padding-top: 15%;
+    text-align: center;
+}
+
 .container{
     border: 2px solid rgb(241, 4, 4);
 }
 
+:root{
+    --bs-link-color: #000000;
+}
+
+.container-fluid{
+    display: flex;
+    height: 100vh;    
+}
