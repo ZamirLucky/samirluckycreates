@@ -1,11 +1,17 @@
-/* 
-*{} */
+
+*{
+    --bs-link-color: #000000;
+    --icon-link-gap: .375rem;
+} 
 
 .container-fluid{
     background-color: rgb(51, 173, 255, 0.7);
+    display: flex;
+    height: 100vh; 
 } 
 
 .navbar-container{
+
     width: 10%;
 }
 
@@ -14,15 +20,18 @@
     text-align: center;
 }
 
+/* .social-media-icons{
+    size: var(--icon-link-icon-size);
+} */
+
 .container{
     border: 2px solid rgb(241, 4, 4);
 }
 
 :root{
-    --bs-link-color: #000000;
+    --bs-link-icon-color: #000000;
+    --icon-link-gap: .375rem;
+    --icon-link-icon-size: 1em;
 }
 
-.container-fluid{
-    display: flex;
-    height: 100vh;    
-}
+
