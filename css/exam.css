@@ -1,0 +1,51 @@
+
+.nav-text{
+    display: none;
+}
+.round-nav-icons:hover{
+    border-radius: 50rem;     
+}
+
+.round-nav-icons{
+    border-radius: 50rem 0 0 50rem; 
+    background-color: red;
+    padding: 8px 16px;
+    align-items: center; 
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+    display: inline;
+}
+
+.round-nav-icons:hover .nav-text{
+    display: inline-block;   
+}
+
+
+
+
+
+/* 
+.nav-link {
+
+    border-radius: 50rem 0 0 50rem;
+    
+    transition: background-color 0.3s, border-radius 0.3s, width 0.3s ease;
+    
+  }
+  
+
+  .nav-text {
+    display: none;
+    margin-left: 8px; 
+  }
+  
+ 
+ 
+  .nav-link:hover {
+    border-radius: 50rem; 
+    width: 100px; 
+  }
+  
+  .nav-link:hover .nav-text {
+    display: inline-block; 
+  } */
+  

@@ -1,8 +1,4 @@
 
-*{
-    --bs-link-color: #000000;
-    --icon-link-gap: .375rem;
-} 
 
 .container-fluid{
     background-color: rgb(51, 173, 255, 0.7);
@@ -10,28 +6,96 @@
     height: 100vh; 
 } 
 
+/* navbar section style */
 .navbar-container{
-
-    width: 10%;
+    width: 25%;
+    height: 100%;
+   
+}
+.navbar{
+    height: 100%;
 }
 
+/* .nav-link{
+    transition: background-color 0.3s, border-radius 0.3s, padding 0.3s ease;
+    
+}
+
+.nav-text{
+    display: none;
+} */
+
+/* .nav-link:hover{
+    border-radius: 50rem; 
+} */
+/* .nav-link:hover .nav-text{  
+    display: inline-block;
+    font-size: 14px;
+}
+
+.nav-link.my-rounded-start-pill {
+    border-radius: 50rem 0 0 50rem; 
+}
+.nav-link:hover.my-rounded-start-pill {
+    border-radius: 50rem; 
+}
+.my-rounded-start-pill {
+    border-radius: 50rem 0 0 50rem; 
+}
+.my-rounded-start-pill:hover {
+    border-radius: 50rem; 
+} */
+/* .rounded-pill{   -----------------------------does not work
+    display: none;
+} */
+
+/* #home:hover #home-text{
+    border-radius: 50rem;
+    display: inline-block;
+    font-size: 14px;
+    
+}  */
+/* #about:hover{
+    border-radius: 50rem;
+    width: 100px;
+} */
+
+
+/* .rounded-circle{
+
+    background-color: red;
+    /* padding-left: 30px;
+    padding-right: 30px; 
+
+    padding: 20px;
+
+} */
+
+i{
+    width: 200px;
+}
+
+/* social media section style */
 .info-container{
     padding-top: 15%;
     text-align: center;
 }
 
-/* .social-media-icons{
-    size: var(--icon-link-icon-size);
-} */
+.icon-link, .nav-link i{
+    color: #000000;
+    font-size: 20px;
+}
+
+
 
 .container{
     border: 2px solid rgb(241, 4, 4);
 }
 
-:root{
+/* :root{
     --bs-link-icon-color: #000000;
     --icon-link-gap: .375rem;
     --icon-link-icon-size: 1em;
-}
+} */
 
 
