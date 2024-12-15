@@ -3,12 +3,14 @@
     display: none;
 }
 .round-nav-icons:hover{
-    border-radius: 50rem;     
+    border-radius: 50rem; 
+    background-color: rgb(54, 91, 240);    
+    padding: 8px 16px;
 }
 
 .round-nav-icons{
     border-radius: 50rem 0 0 50rem; 
-    background-color: red;
+    background-color: rgb(225,191,146);
     padding: 8px 16px;
     align-items: center; 
     transition: border-radius 0.3s ease, background-color 0.3s ease;
