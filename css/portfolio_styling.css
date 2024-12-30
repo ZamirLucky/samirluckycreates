@@ -62,6 +62,38 @@ h1{
     border: 2px solid rgb(241, 4, 4);
 }
 
+/* About Section */
+.info-icons{
+    font-size: 10px;
+}
+
+  
+hr.solid-hr{
+    border: 1px solid #000000;
+    width: 20%;
+    margin-left: 40%; 
+    margin-top: -4px;
+}
+hr.tick-hr{
+    border: 3px solid hsla(0, 0%, 0%, 0.879);
+    width: 8%;
+    margin-left: 46%; 
+    margin-top: -20px;
+}
+@media (max-width: 768px){
+    hr.solid-hr{
+        width: 40%;
+        margin-left: 30%; 
+    }
+    hr.tick-hr{       
+        width: 12%;
+        margin-left: 44%; 
+    }
+
+
+    
+}
+
 /* :root{
     --bs-link-icon-color: #000000;
     --icon-link-gap: .375rem;
