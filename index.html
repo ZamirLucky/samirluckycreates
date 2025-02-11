@@ -12,91 +12,157 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!--My stylesheets-->
-    <link rel="stylesheet" href="css/portfolio_styling.css">
-    <link rel="stylesheet" href="css/exam.css">
+    <link rel="stylesheet" href="css/main.css">
+  
 </head>
 <body>
-    <div class="container-fluid hero">
-        <div class="container navbar-container"> <!-- navbar-container -->
+    <!-- Home container-->
+    <div class="container-fluid hero" id="home">  <!-- Hero container -->
+      <!-- Canvas -->      
+      <div class="offcanvas offcanvas-start" id="nav-canvas" tabindex="-1">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav   flex-column position-sticky">
+            <li class="nav-item pt-3">
+              <a class="nav-link active round-nav-icons" aria-current="page" href="#home" id="nav-home">
+                <i class="bi bi-house-door-fill "></i>
+                <span class="nav-text fs-6">Home</span>
+              </a>  
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link round-nav-icons" href="#about" id="nav-about">
+                <i class="bi bi-person-fill"></i>
+                <span class="nav-text fs-6">About</span>
+              </a>
+            </li>   
+            <li class="nav-item pt-3">
+              <a class="nav-link round-nav-icons" href="#resume" id="nav-resume">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class="nav-text fs-6">Resume</span>
+              </a>
+            </li>  
+            <li class="nav-item pt-3">
+              <a class="nav-link round-nav-icons" href="#portfolio" id="nav-portfolio">
+                <i class="bi bi-briefcase-fill"></i>
+                <span class="nav-text fs-6">Portfolio</span>
+              </a>
+            </li>   
+            <li class="nav-item pt-3">
+              <a class="nav-link round-nav-icons" href="#contact" id="nav-contact">
+                <i class="bi bi-envelope-heart-fill"></i>
+                <span class="nav-text fs-6">Contact</span>
+              </a>
+            </li>                                   
+          </ul>
+          <br>
+          <br>
+          <div> 
+            <a class="icon-link " href="https://www.linkedin.com/in/abdirizak-osman-11b794231/">
+              <i class="bi bi-linkedin"></i>
+              <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+            </a>
+            <a class="icon-link " href="https://github.com/ZamirLucky">
+              <i class="bi bi-github"></i>
+              <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+            </a>
+            <a class="icon-link " href="https://x.com/SamirLucky9485">
+              <i class="bi bi-twitter-x"></i>
+              <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+            </a>
+            <a class="icon-link " href="https://www.facebook.com/profile.php?id=100005233575057">
+              <i class="bi bi-facebook"></i>
+              <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+            </a>    
+          </div> 
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg  ">
-                <div class="container-fluid">                 
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+      </div>
 
-                    <ul class="navbar-nav   flex-column ">
-                      <li class="nav-item pt-3">
-                        <a class="nav-link active round-nav-icons" aria-current="page" href="#" id="home">
-                          <i class="bi bi-house-door-fill "></i>
+      <!-- navbar-container -->
+        <div class="container-fluid navbar-container">           
+            <nav class="navbar">
+                <div>               
+                    <ul class="navbar-nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link round-nav-icons" aria-current="page" href="#home" id="nav-home">
+                          <i class="bi bi-house-door-fill"></i>
                           <span class="nav-text fs-6">Home</span>
                         </a>  
                       </li>
                       <li class="nav-item pt-3">
-                        <a class="nav-link round-nav-icons" href="#" id="about">
+                        <a class="nav-link round-nav-icons" href="#about" id="nav-about">
                           <i class="bi bi-person-fill"></i>
                           <span class="nav-text fs-6">About</span>
                         </a>
                       </li>   
                       <li class="nav-item pt-3">
-                        <a class="nav-link round-nav-icons" href="#">
+                        <a class="nav-link round-nav-icons" href="#resume" id="nav-resume">
                           <i class="bi bi-file-earmark-text-fill"></i>
                           <span class="nav-text fs-6">Resume</span>
                         </a>
                       </li>  
                       <li class="nav-item pt-3">
-                        <a class="nav-link round-nav-icons" href="#">
+                        <a class="nav-link round-nav-icons" href="#portfolio" id="nav-portfolio">
                           <i class="bi bi-briefcase-fill"></i>
                           <span class="nav-text fs-6">Portfolio</span>
                         </a>
                       </li>   
                       <li class="nav-item pt-3">
-                        <a class="nav-link round-nav-icons" href="#">
+                        <a class="nav-link round-nav-icons" href="#contact" id="nav-contact">
                           <i class="bi bi-envelope-heart-fill"></i>
                           <span class="nav-text fs-6">Contact</span>
                         </a>
                       </li>                                   
                     </ul>
-                    
-                  </div>
                 </div>
             </nav> 
         </div>
 
-        <div class="container info-container">
+        <!-- Hero content -->
+        <div class="container-fluid hero-container">
           <h1 class="display-3"><strong>Abdirizak Hassan Osman</strong></h1>
-          <!-- <p class="h1"></p> -->
-          <p class="display-6">I am developer</p>
-          <div> 
-            <a class="icon-link " href="#">
+          <div class="display-6"> 
+            <p>I am <span id="element" class="display-phrase"></span></p>
+          </div>
+          
+          <div class="mt-3"> 
+            <a class="icon-link " href="https://www.linkedin.com/in/abdirizak-osman-11b794231/">
               <i class="bi bi-linkedin"></i>
               <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
             </a>
-            <a class="icon-link " href="#">
+            <a class="icon-link " href="https://github.com/ZamirLucky">
               <i class="bi bi-github"></i>
               <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
             </a>
-            <a class="icon-link " href="#">
-              <i class="bi bi-linkedin"></i>
+            <a class="icon-link " href="https://x.com/SamirLucky9485">
+              <i class="bi bi-twitter-x"></i>
               <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
             </a>
-            <a class="icon-link " href="#">
+            <a class="icon-link " href="https://www.facebook.com/profile.php?id=100005233575057">
               <i class="bi bi-facebook"></i>
               <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
-            </a>
-            
-          </div>
+            </a>    
+          </div>       
         </div>
 
-        <div class="container my-image-container">
-          <img src="images/me2.png" alt="mypic" style="height: 100%;"/>
+        <!-- Image container -->
+        <div class="container-fluid image-container">
+          <img src="images/me2 - Copy.png" class="img-fluid my-main-image" alt="mypic"/>
         </div>
 
+        <!-- canvas toggle button -->
+        <div class="btn-canva-container"> 
+          <button class="btn btn-canva" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-canvas">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
     </div>
-    <div class="container">
-      
+
+
+    <!-- About container -->
+    <div class="container" id="about"> 
       <h2 class="text-center mt-3">About</h2>
       <div class="position-relative">
         <hr class="solid-hr">
@@ -107,9 +173,8 @@
         <li class="mb-3"> Experience with debugging and implementing software using modern technologies like Flutter, Dart, C#, and more.</li>
         <li class="mb-3">Good in web development (HTML, CSS, JavaScript, PHP, etc.) and backend technologies (MySQL, MVC, etc.).</li>
         <li>Knowledgeable in software process models such as Waterfall and Incremental.</li>
-      </ul>
-      
-
+        </ul>
+      </div>
       <div class="row pt-3">
         <div class="col-md-12 col-lg-4">
           <img src="./images/m3.jpg" alt="my-profile-pic" class="img-fluid w-100 rounded-3">
@@ -139,10 +204,295 @@
           </div>
         </div>
       </div>
-
+    </div>
+  
+    <!-- Resume container -->
+    <div class="container " id="resume">
+      <h2 class="text-center mt-4">Resume</h2>
+      <div class="position-relative">
+        <hr class="solid-hr">
+        <hr class="tick-hr">
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center mt-5 ms-md-5"> 
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <h4>Education</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Bachelor of Computer Science</h5>
+                    <p class="mb-1">2023 - crunt</p>
+                    <p class="mb-2">Malta College of Arts, Science and Technology (MCAST)</p>
+                  </div>
+                </div>     
+              </div>
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Advanced Diploma in IT (Software Development)</h5>
+                    <p class="mb-1">2021 - 2023</p>
+                    <p class="mb-1">Malta College of Arts, Science and Technology (MCAST)</p>
+                  </div>
+                </div>                     
+              </div>
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Diploma in ICT</h5>
+                    <p class="mb-1">2020 - 2021</p>
+                    <p class="mb-1">Malta College of Arts, Science and Technology (MCAST)</p>
+                  </div>
+                </div>                      
+              </div>
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Foundation Certificate in ICT</h5>
+                    <p class="mb-1">2019 - 2020</p>
+                    <p class="mb-1">Malta College of Arts, Science and Technology (MCAST)</p>
+                  </div>
+                </div>       
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <h4>Experience</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Backend Developer</h5>
+                    <p class="mb-1">2023 - 2024</p>
+                    <p class="mb-1">MCAST</p>
+                  </div>
+                </div>       
+              </div>
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Application Developer</h5>
+                    <p class="mb-1">2022 - 2024</p>
+                    <p class="mb-1">MCAST</p>
+                  </div>
+                </div>  
+              </div>
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Web Developer</h5>
+                    <p class="mb-1">2021 - 2024</p>
+                    <p class="mb-1">MCAST</p>
+                  </div>
+                </div>  
+              </div>                  
+              <div class="col-12">
+                <div class="d-flex mt-2">
+                  <div class="vertical"> 
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="ms-2 mt-2"> 
+                    <h5 class="mb-1">Intern</h5>
+                    <p class="mb-1">2024 - 2024</p>
+                    <p class="mb-1">G9Telecom SA</p>
+                  </div>
+                </div>      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 text-center">
+        <a href="G:\My Drive\CVs\Abdirizak Software Development Resume.pdf" class="btn btn-secondary btn-sm" download>
+          Download My CV
+        </a>
+      </div>
     </div>
 
+    <!-- Portfolio Section -->
+    <div class="container" id="portfolio">
+      <h2 class="text-center mt-3">Portfolio</h2>
+      <div class="position-relative">
+          <hr class="solid-hr">
+          <hr class="tick-hr">
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center mt-4"> 
+          <div class="row g-4">
+              <!-- Test Automation Card -->
+              <div class="col-md-12 col-lg-4">
+                  <div class="card shadow-lg">
+                      <img src="images/automation_testing.jpg" class="card-img-top" alt="Test Automation">
+                      <div class="card-body">
+                          <h5 class="card-title">Test Automation</h5>
+                          <p class="card-text">
+                              This project focused on practicing software test automation by generating and testing TOTP. 
+                              Additionally, it included launching and testing the Amazon.de website.
+                          </p>
+                          <a href="https://github.com/ZamirLucky/Testing-Application-And-Website/" 
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                              View Project
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Contact Management System Card -->
+              <div class="col-md-12 col-lg-4">
+                  <div class="card shadow-lg">
+                      <img src="images/CSM_Python.PNG" class="card-img-top" alt="Contact Management System">
+                      <div class="card-body">
+                          <h5 class="card-title">Contact Management System</h5>
+                          <p class="card-text">
+                              A Python-based contact management system allowing users to manage a list of contacts, 
+                              including adding, searching, displaying, and deleting contacts.
+
+                          </p>
+                          <a href="https://github.com/ZamirLucky/contact-management-system-used-python" 
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                              View Project
+                          </a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Sentiment Analysis Card -->
+              <div class="col-md-12 col-lg-4">
+                  <div class="card shadow-lg">
+                      <img src="images/sentment_analysis.PNG" class="card-img-top" alt="Sentiment Analysis">
+                      <div class="card-body">
+                          <h5 class="card-title">Amazon Review Sentiment Analyzer</h5>
+                          <p class="card-text">
+                              A GUI-based Amazon Review Sentiment Analyzer using Tkinter, BeautifulSoup, and VADER Sentiment Analysis. 
+                              It scrapes customer reviews and analyzes their sentiment.
+                          </p>
+                          <a href="https://github.com/ZamirLucky/Review-sentiment-analyzer-used-python" 
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                              View Project
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Contact container -->
+    <div class="container sections" id="contact">
+      <h2 class="text-center mt-3">Contact</h2>
+      <div class="position-relative">
+        <hr class="solid-hr">
+        <hr class="tick-hr">
+      </div>
+      <p class="text-center">Feel free to reach out to me for any queries or just to say hi!</p>
+      <div class="d-flex flex-column mt-5"> 
+        <div class="row">
+          <div class="col-md-12 col-lg-4 ">
+            <p class="mt-0 mt-md-5">
+              <i class="bi bi-geo-alt-fill"></i> <strong >Address</strong> <u>my Address</u> 
+            </p>
+            <p class="mt-0 mt-md-4">
+              <i class="bi bi-envelope-fill"></i> <strong>Email me</strong> <u>abdorizak264@gmail.com</u>
+            </p>
+            <p class="mt-0 mt-md-4">
+              <i class="bi bi-telephone-fill"></i> <strong>Call me</strong> <u>+356 99725544</u> 
+            </p>
+          </div>
+          <div class="col-md-12 col-lg-8">
+            <form id="contact-form">
+              <div class="mb-3 row g-2">
+                <div class="col">
+                  <input type="text" class="form-control" name="text-name" id="name" aria-describedby="nameHelp" placeholder="Your Name">
+                </div>
+                <div class="col">
+                  <input type="email" class="form-control" name="text-email" id="email" aria-describedby="emailHelp" placeholder="Your Email">
+                </div>                   
+              </div> 
+              <div class="mb-3">
+                <input type="text" class="form-control" name="text-subject" id="subject" aria-describedby="subjectHelp" placeholder="subject">              
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" name="text-message" id="message" rows="6" placeholder="Message"></textarea>
+              </div>
+              <div class="d-flex justify-content-center"> 
+              <button type="submit" name="submit" class="btn btn-secondary rounded-pill btn-md px-4 py-2">Send Message</button>
+              </div>
+            </form>
+            <P class="error-message danger"></P>
+          </div>    
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- footer container -->
+    <div class="container-fluid footer-container">
+      <div class="container">
+        <div class="row mt-5 text-center">
+            <h1>Abdirizak Hassan Osman</h1>                   
+          <div class="col-12">
+            <p>Follow Me on Social Media</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/abdirizak-osman-11b794231/"><i class="bi bi-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/ZamirLucky"><i class="bi bi-github"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005233575057"><i class="bi bi-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="https://x.com/SamirLucky9485"><i class="bi bi-twitter-x"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-12 border-top mt-2 py-4">
+            <p>&copy; 2025 Abdirizak Hassan Osman. All Rights Reserved.</p>
+          </div>     
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+    <!-- Typed js -->
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- just-validate js -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <!-- My js -->
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,291 @@
+
+
+.hero{
+  background-image: url('../images/l3.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100vh; 
+} 
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(254, 254, 255, 0.5);
+}
+
+/*canvas styling*/
+.btn-canva-container{
+  z-index: 1;
+  position: fixed;
+  top: 10px;
+  right: 2%;
+
+}
+.btn-canva{
+  border-radius: 50%;
+  background-color: rgb(54, 91, 240);;
+}
+
+.btn-canva i{
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/* navbar section style */
+.navbar-container{
+  width: 20%;
+  height: 100%;
+  z-index: 1;
+}
+.navbar{
+  height: 100%;   
+}
+
+i{
+  width: 200px;
+}
+
+/* hero section styling */
+.hero-container{
+  width: 50%;
+  padding-top: 15%;
+  text-align: left;
+  z-index: 1;
+}
+
+.icon-link, .nav-link i{
+  color: #000000;
+  font-size: 20px;
+}
+
+.icon-link:hover{
+  color: rgb(54, 91, 240);
+}
+
+#display-phrase{
+  display: inline-block;
+  border-bottom:3px solid rgb(54, 91, 240);
+  padding-bottom: 0px;
+  transition: all 0.3s ease;
+}
+
+
+.my-image-container{
+  width: 30%;
+  /* padding-top: 25%; */
+}
+h1{
+  font-weight: bolder;
+  
+}
+
+/*Only small device*/
+.hero-container-small-device{
+  display: none;
+}
+
+.container{
+  border: 2px solid rgb(241, 4, 4);
+}
+
+/* for the screen larger than 1200px*/
+@media (min-width: 1200px) {
+  .btn-canva{
+      display: none;
+  }
+  .navbar-container{
+      display: block;
+  }
+}
+
+/* for the screen smaller than 1200px*/
+@media(max-width: 1199px) {
+  .navbar-container{
+      display: none;
+  }
+  .btn-canva{
+      display: block;
+  }
+  .hero-container{
+      width: 60%;
+      margin-left: 1%;
+      /* padding-top: 25%; */
+  }
+  .display-3{
+      font-size: 3rem;
+  }
+  .display-6{
+      font-size: 2rem;
+  }
+  .my-image-container{
+      width: 39%;
+      margin-left: 0%;
+      /* padding-top: 25%; */
+  }
+
+}
+
+/* for the screen smaller than 992px*/
+@media (max-width: 992px){
+  
+  .hero-container{
+      width: 55%;
+      margin-left: 1%;
+      /* padding-top: 25%; */
+  }
+  .my-image-container{
+      width: 44%;
+      margin-left: auto;
+      margin-right: auto;
+      /* padding-top: 25%; */
+      padding-right: 5%;
+      text-align: center;
+  }
+  .display-3{
+      font-size: 2rem;
+  }
+  .display-6{
+      font-size: 1.5rem;
+  }  
+  img{
+      width: 500px;
+  }
+  
+}
+@media (max-width: 768px){
+  .hero-container{
+      display: none;
+  }
+  .my-image-container{
+      display: none;     
+  }
+  .hero-container-small-device{
+      display: flex;
+      width: 100%;
+
+  }
+  .hero-content-small-device{
+      width: 50%;
+      margin-right: -20%;
+      z-index: 1;
+      padding-top: 40%;
+      text-align: left;
+  }
+  .display-3{
+      font-size: 1.5rem;
+  }
+  .display-6{
+      font-size: 1.4rem;
+  }
+  .hero-image-container{
+      width: 100%;
+      flex: 1;
+      text-align: right;
+      margin-right: -35%;
+  }
+  .hero-image-container img {
+      height: 100%;
+      max-width: 80%; 
+      object-fit: cover; 
+      margin-bottom: 20%;
+  }
+}
+
+@media (max-width: 600px){
+  .hero-content-small-device{
+     display: none;
+  }
+  .hero-image-container{
+      text-align: center;
+      border: 2px solid rgb(5, 5, 5);
+      width: 100%;
+      height: 100%;
+      
+  }
+  .hero-container-small-device{
+      display: block;
+      border: 2px solid rgb(51, 240, 9);
+  }
+  .hero-image-container img {
+      height: 80%;
+      max-width: 100%; 
+      object-fit: cover; 
+      border: 2px solid rgb(17, 9, 243);
+      margin-top: 30%;
+  }
+} 
+
+
+
+
+
+
+/* About Section */
+.info-icons{
+  font-size: 10px;
+}
+
+
+hr.solid-hr{
+  border: 1px solid #000000;
+  width: 20%;
+  margin-left: 40%; 
+  margin-top: -4px;
+}
+hr.tick-hr{
+  border: 3px solid hsla(0, 0%, 0%, 0.879);
+  width: 8%;
+  margin-left: 46%; 
+  margin-top: -20px;
+}
+@media (max-width: 768px){
+  hr.solid-hr{
+      width: 40%;
+      margin-left: 30%; 
+  }
+  hr.tick-hr{       
+      width: 12%;
+      margin-left: 44%; 
+  } 
+}
+
+/* Resume Styling */
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+}
+.circle {
+  width: 12px; 
+  height: 12px;
+  background-color: none; 
+  border: 1px solid rgb(0, 0, 0); 
+  border-radius: 50%; 
+} 
+.line {
+  width: 2px; 
+  height: 70px;
+  background-color: rgb(0, 0, 0); 
+}
+
+
+/* :root{
+  --bs-link-icon-color: #000000;
+  --icon-link-gap: .375rem;
+  --icon-link-icon-size: 1em;
+} */
+
+/* .my-image{
+  background-image: url('../images/me1-remove-background.com4.png');
+  background-size: cover;
+  background-position: center;
+} */
+
+

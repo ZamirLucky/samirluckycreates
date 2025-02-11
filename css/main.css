@@ -1,0 +1,312 @@
+
+
+.hero{
+    background-image: url('../images/l3.jpg');
+    background-repeat: no-repeat;  
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+} 
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(254, 254, 255, 0.5);
+}
+
+/* navbar section style */
+.navbar-container{
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+}
+.navbar{  
+    position: fixed;
+    top: 20vh;
+}
+.nav-text{
+    display: none;
+    color: #ffffff;
+}
+.round-nav-icons{
+    border-radius: 50rem 0 0 50rem; 
+    background-color: #365bf0;
+    padding: 8px 16px;
+    align-items: center; 
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+    display: inline;
+}
+.navbar-nav .nav-item .nav-link.active { 
+    border-radius: 50rem !important; 
+}
+.navbar-nav .nav-item .nav-link.active .nav-text{
+    display: inline-block;
+}
+.round-nav-icons:hover{
+    border-radius: 50rem;    
+}
+.round-nav-icons:hover .nav-text{
+    display: inline-block;   
+}
+/*Responsive-canvas styling*/
+.btn-canva-container{
+    z-index: 1;
+    position: fixed;
+    top: 10px;
+    right: 2%;
+}
+.btn-canva{
+    border-radius: 50%;
+    display: none;
+    background-color: rgb(54, 91, 240);;
+}
+
+.btn-canva i{
+    font-size: 25px;
+    text-align: center;
+}
+
+/* hero section styling */
+.hero-container{
+    width: 60%;
+    padding-top: 25vh;
+    text-align: left;
+    z-index: 1;
+}
+
+.icon-link, .nav-link i{
+    color: #000000;
+    font-size: 20px;
+}
+
+.icon-link:hover{
+    color: rgb(54, 91, 240);
+}
+
+.display-phrase{
+    display: inline-block;
+    border-bottom:3px solid rgb(54, 91, 240);
+    padding-bottom: 0px;
+    transition: all 0.3s ease;
+}
+
+
+.image-container{
+    width: 30%;
+    height: 100%;
+}
+h1{
+    font-weight: bolder;   
+}
+
+.my-main-image{
+    width: 70%;
+    height: 70vh;
+    margin-top: 20vh;
+}
+
+/* .container-fluid{
+    border: 2px solid rgb(241, 4, 4);
+}
+.container{
+    border: 2px solid rgb(240, 12, 232);
+} */
+
+/* for the screen smaller than 1200px*/
+@media(max-width: 1200px) {
+    .navbar-container{
+        display: none;
+    }
+    .btn-canva{
+        display: block;
+    }
+    .hero-container{
+        width: 60%;
+    }
+    .display-3{
+        font-size: 3rem;
+    }
+    .display-6{
+        font-size: 2rem;
+    }
+    .image-container{
+        width: 40%;
+    }
+    .my-main-image{
+        width: 90%;
+        height: 60vh;
+        margin-top: 30vh;
+    }
+
+}
+
+/* for the screen smaller than 992px*/
+@media (max-width: 992px){
+    
+    .hero-container{
+        width: 50%;
+    }
+    .image-container{
+        width: 50%;
+    }
+    .display-3{
+        font-size: 2rem;
+    }
+    .display-6{
+        font-size: 1.5rem;
+    }  
+    .my-main-image{
+        width: 80%;
+        margin-top: 25vh;
+    }  
+}
+/* for the screen smaller than 768px*/
+@media (max-width: 768px){
+    .hero-container{
+        display: none;
+    }
+}
+/* for the screen smaller than 600px*/
+@media (max-width: 600px){
+    .image-container{
+        width: 70%;
+    }
+} 
+/* for the screen smaller than 468px*/
+@media (max-width: 468px){
+    .image-container{
+        width: 100%;
+    }
+}
+
+/* About Section */
+.info-icons{
+    font-size: 10px;
+}
+
+  
+hr.solid-hr{
+    border: 1px solid #000000;
+    width: 20%;
+    margin-left: 40%; 
+    margin-top: -4px;
+}
+hr.tick-hr{
+    border: 3px solid hsla(0, 0%, 0%, 0.879);
+    width: 8%;
+    margin-left: 46%; 
+    margin-top: -20px;
+}
+@media (max-width: 768px){
+    hr.solid-hr{
+        width: 40%;
+        margin-left: 30%; 
+    }
+    hr.tick-hr{       
+        width: 12%;
+        margin-left: 44%; 
+    } 
+}
+
+/* Resume Styling */
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.circle {
+    width: 12px; 
+    height: 12px;
+    background-color: none; 
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 50%; 
+} 
+.line {
+    width: 2px; 
+    height: 70px;
+    background-color: rgb(0, 0, 0); 
+}
+.btn-secondary{
+    background-color: rgb(54, 91, 240);
+    border: none;
+}
+
+/* Portfolio Styling */
+/* Card Styling */
+/* Ensuring equal card heights */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Make all cards the same height */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure all cards take full height */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure images have a fixed height */
+.card img {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Force the card-body to take up the remaining space */
+.card-body {
+    flex-grow: 1; /* Makes sure all card bodies grow to equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures button stays at bottom */
+    text-align: center;
+}
+
+/* Ensure all buttons align at the bottom */
+.card-body .btn {
+    margin-top: auto; 
+    margin-left: 30%; 
+    width: 40%; 
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #365bf0;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Contact Styling */
+
+
+/* Footer Styling */
+
+
+
+/* :root{
+    --bs-link-icon-color: #000000;
+    --icon-link-gap: .375rem;
+    --icon-link-icon-size: 1em;
+} */
