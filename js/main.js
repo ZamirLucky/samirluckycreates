@@ -74,22 +74,28 @@ validator
     if (form && form instanceof HTMLFormElement) {
          
         const formData = new FormData(form);   // Create FormData object from the form
+        const jsonObject = {};
+        formData.forEach((value, key) => { jsonObject[key] = value }); // Convert FormData to JSON
 
-        fetch("send_email.php", {  
+        fetch("https://formspree.io/f/xjkgeekl", {  
             method: "POST",
-            body: formData,
+            headers: { 
+              "Content-Type": "application/json", // Send JSON data
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(jsonObject) // Convert JSON object to string,
         })
-        .then(response => response.json()) 
-        .then(data => {
-            if (data.success) {
-                alert(data.message);
-                form.reset();
+        .then(response => {
+            if (response.ok) {
+              alert("Your message has been sent successfully!");
+              form.reset();
             } else {
-                alert(data.error);
-            }       
-        })
+              return response.json().then(err => Promise.reject(err));
+            }   
+        }) 
         .catch(error => {
-            alert("Something went wrong. Please try again.", error);
+            alert("Your message could not be sent. Please try again.");
+            console.error("form submision error: ", error);
         });
     } else {
         alert("Something went wrong. Please try again.");
