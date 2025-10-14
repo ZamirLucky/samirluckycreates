@@ -1,7 +1,7 @@
 
-// Typed.js
+// Initialize the Typed.js library for typing animation
 var typed = new Typed('#element', {
-  strings: ['software engineer', 'frontend developer', 'backend developer', 'full stack developer', 'application developer'],
+  strings: ['Software Engineer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Application Developer', 'growing AI/ML Developer'],
   typeSpeed: 200,
   backSpeed: 200,
   backDelay: 2000,
@@ -9,7 +9,7 @@ var typed = new Typed('#element', {
 
 });
 
-// 
+// Highlight active navigation link based on scroll position
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("div[id]"); 
     const navLinks = document.querySelectorAll(".nav-link"); 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 
+// Contact form validation and submission using JustValidate library and Formspree API
 const validator = new JustValidate(document.querySelector('#contact-form'));  
     
 validator
@@ -47,6 +47,11 @@ validator
     value: 3,
     errorMessage: 'The name must be at least 3 characters',
   },
+  {
+    rule: 'maxLength',
+    value: 50,
+    errorMessage: 'The name must be less than 50 characters',
+  },
 ])
 .addField(document.querySelector('#email'), [
   {
@@ -55,35 +60,55 @@ validator
   {
     rule: 'email', errorMessage: 'Please enter a valid email',
   },
+  {
+    rule: 'maxLength',
+    value: 100,
+    errorMessage: 'The email must be less than 100 characters',
+  },
 ])
 .addField(document.querySelector('#subject'), [
   {
     rule: 'required', errorMessage: 'Please enter the subject',
   },
+  { rule: 'maxLength', value: 100, errorMessage: 'The subject must be less than 100 characters' },
 ])
 .addField(document.querySelector('#message'), [
   {
     rule: 'required', errorMessage: 'Please enter your message',
   },
+  { rule: 'maxLength', value: 700, errorMessage: 'The message must be less than 700 characters' },
 ])
 .onSuccess((event) => {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const form = document.getElementById('contact-form');
 
     if (form && form instanceof HTMLFormElement) {
          
-        const formData = new FormData(form);   // Create FormData object from the form
+        const formData = new FormData(form); 
         const jsonObject = {};
-        formData.forEach((value, key) => { jsonObject[key] = value }); // Convert FormData to JSON
+        formData.forEach((value, key) => { jsonObject[key] = value }); 
 
+        // Client-side validation
+        if (!jsonObject['text-name'] || !jsonObject['text-email'] || !jsonObject['text-message']) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        // Honeypot field check
+        if (jsonObject['userCode']) {
+            console.warn("Spam detected via honeypot field.");
+            return; 
+        }
+
+        // If validation passes, proceed to submit the form data
         fetch("https://formspree.io/f/xjkgeekl", {  
             method: "POST",
             headers: { 
-              "Content-Type": "application/json", // Send JSON data
+              "Content-Type": "application/json", 
               "Accept": "application/json"
             },
-            body: JSON.stringify(jsonObject) // Convert JSON object to string,
+            body: JSON.stringify(jsonObject) 
         })
         .then(response => {
             if (response.ok) {
