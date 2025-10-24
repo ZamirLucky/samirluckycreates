@@ -1,7 +1,7 @@
 
 // Initialize the Typed.js library for typing animation
 var typed = new Typed('#element', {
-  strings: ['Software Engineer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Application Developer', 'growing AI/ML Developer'],
+  strings: ['Software Engineer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Application Developer', 'AI/ML Developer'],
   typeSpeed: 200,
   backSpeed: 200,
   backDelay: 2000,
